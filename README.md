@@ -21,10 +21,6 @@ O objetivo principal é oferecer um produto completo e acessível. O Glico Assis
 
 Instruções detalhadas sobre como utilizar o glicosímetro e acessar o site informativo serão fornecidas após o desenvolvimento completo do projeto.
 
-## Simulação no Tinkercad
-
-*Link para a simulação do projeto no Tinkercad será disponibilizado após sua criação.*
-
 ## Trabalho a Ser Realizado para Entrega
 
 O desenvolvimento do glicosímetro exigirá precisão técnica, usabilidade e testes extensivos. A criação do site informativo demandará conteúdo claro e acessível, combinado com uma interface intuitiva.
