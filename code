@@ -1,0 +1,47 @@
+// Definição dos pinos dos LEDs e do potenciômetro
+const int potPin = A0;
+const int greenLedPin = 4;
+const int yellowLedPin = 3;
+const int redLedPin = 2;
+
+void setup() {
+  pinMode(greenLedPin, OUTPUT);
+  pinMode(yellowLedPin, OUTPUT);
+  pinMode(redLedPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Leitura do valor do potenciômetro
+  int sensorValue = analogRead(potPin);
+
+  // Mapeia o valor do potenciômetro para um intervalo correspondente aos níveis de glicose
+  int glucoseLevel = map(sensorValue, 0, 1023, 70, 150); // Mapeia para os valores típicos de glicose em mg/dL
+
+  // Exibição do valor lido do potenciômetro e o nível de glicose no monitor serial
+  Serial.print("Valor do potenciômetro: ");
+  Serial.print(sensorValue);
+  Serial.print("\tNível de glicose: ");
+  Serial.println(glucoseLevel);
+
+  // Condições para acender os LEDs de acordo com as faixas de nível de glicose
+  if (glucoseLevel >= 70 && glucoseLevel <= 99) {
+    digitalWrite(greenLedPin, HIGH); // Ligar o LED verde
+    digitalWrite(yellowLedPin, LOW); // Desligar o LED amarelo
+    digitalWrite(redLedPin, LOW);    // Desligar o LED vermelho
+  } else if (glucoseLevel >= 100 && glucoseLevel <= 125) {
+    digitalWrite(greenLedPin, LOW);  // Desligar o LED verde
+    digitalWrite(yellowLedPin, HIGH); // Ligar o LED amarelo
+    digitalWrite(redLedPin, LOW);    // Desligar o LED vermelho
+  } else if (glucoseLevel >= 126) {
+    digitalWrite(greenLedPin, LOW);  // Desligar o LED verde
+    digitalWrite(yellowLedPin, LOW); // Desligar o LED amarelo
+    digitalWrite(redLedPin, HIGH);   // Ligar o LED vermelho
+  } else {
+    digitalWrite(greenLedPin, LOW);  // Desligar o LED verde
+    digitalWrite(yellowLedPin, LOW); // Desligar o LED amarelo
+    digitalWrite(redLedPin, LOW);    // Desligar o LED vermelho
+  }
+
+  delay(100); // Delay para estabilização e leitura mais lenta
+}
