@@ -32,4 +32,5 @@ O desenvolvimento do glicosímetro exigirá precisão técnica, usabilidade e te
 ## Resultados Esperados
 
 Espera-se melhorar o controle dos níveis de glicose e aumentar o conhecimento sobre diabetes para os usuários. A abordagem integrada visa promover um maior engajamento dos usuários em sua própria saúde e bem-estar, oferecendo suporte abrangente para os diabéticos.
-
+## Link Tinkercad
+https://www.tinkercad.com/things/jySqoDzPYgS-edge-gs
