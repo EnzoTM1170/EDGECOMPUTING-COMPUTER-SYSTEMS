@@ -1,7 +1,7 @@
 # EDGECOMPUTING-COMPUTER-SYSTEMS
+Dupla: Enzo Teles de Moura RM553899 / Nícolas Lemos Ribeiro RM553273
 
 # Glico Assist
-
 Projeto Glico Assist, uma solução integrada para simplificar o controle dos níveis de glicose para pessoas com diabetes.
 
 ## Problema de Saúde Abordado
